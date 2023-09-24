@@ -14,7 +14,8 @@ Para que seja possível a execução do projeto, são necessários os seguintes 
 - Jumpers para conectar o circuito
 - Protoboard
 
-## Construção do Projeto
+## Construção do Projeto - [Tinkercad](https://www.tinkercad.com/things/bgfKdTfNJtm)
+
 - A implementação do projeto deve seguir o modelo abaixo, com destaque para as seguintes observações:
     - Os resistores conectados aos leds são de 220Ω;
     - Atentar-se ao conectar o pino de saída do LDR. Ele deve ser oriundo da porta de saída desse sensor;
