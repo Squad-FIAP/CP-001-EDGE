@@ -24,4 +24,5 @@ Para que seja possível a execução do projeto, são necessários os seguintes 
 ![Implementação](./ProjectConstruction.png)
 
 
-## [Vídeo Explicativo](./ProjectExecutingVideo.webm)
+## [Vídeo Explicativo](https://youtu.be/xHlXctdV3P4)
+**Disclaimer**: O vídeo foi gravado em um computador com Ubuntu 22.04, sendo assim, não foi possível capturar o aúdio durante a gravação. A exemplificação do funcionamento do buzzer é notável graças a animação de emissão sonora que o dispositivo apresenta.
