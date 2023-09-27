@@ -1,29 +1,50 @@
 #include <Arduino.h>
 
-int sensorPin = 0;
-float celsius = 0;
-float fahrenheit = 0;
-float kelvin = 0;
-int sensorValue = 0;
+const int RED_LED_PIN = 7;
+const int YELLOW_LED_PIN = 4;
+const int GREEN_LED_PIN = 2;
+const int LDR_PIN = A0;
+const int BUZZER_PIN = 8;
 
-void setup(){
-Serial.begin(9600);
-Serial.println("initialising.....");
+void setup() {
+  pinMode(RED_LED_PIN, OUTPUT);
+  pinMode(YELLOW_LED_PIN, OUTPUT);
+  pinMode(GREEN_LED_PIN, OUTPUT);  
+  pinMode(LDR_PIN, INPUT);
+  Serial.begin(9600);
 }
 
-void loop(){
-printTemp();
-Serial.println("Celcius:");
-Serial.println(Celsius);
-Serial.print("Fahrenheit:");
-Serial.println(Fahrenheit);
-Serial.println();
-delay(2000);
+void turnOffAllLeds() {
+  digitalWrite(RED_LED_PIN, LOW);
+  digitalWrite(YELLOW_LED_PIN, LOW);
+  digitalWrite(GREEN_LED_PIN, LOW);
 }
 
-void printTemp(){
-sensorValue=analogRead(sensorPin); //Lê o sensor
-Kelvin=(((float(sensorValue)/1023)*5)*100);//converte em kelvin
-Celsius=Kelvin-273.15; // converte Kelvin em Celcius
-Fahrenheit=(Celsius*1.8)+32;//converte Celcius para Fahrenheit
+void buzz() {
+  tone(8, 1000, 3000);
+  delay(3000);
+  noTone(8);
+}
+
+void calculateStatusOfWineyard() {
+  int reading = analogRead(LDR_PIN);
+  int mappedReading = map(reading, 160, 600, 1, 8);
+  Serial.println(reading);
+  Serial.println(mappedReading);
+  if (mappedReading <= 3){
+    turnOffAllLeds();
+    digitalWrite(GREEN_LED_PIN, HIGH);
+  } else if (mappedReading > 3 && mappedReading < 7){
+    turnOffAllLeds();
+    digitalWrite(YELLOW_LED_PIN, HIGH);
+  } else if (mappedReading >= 7) {
+    turnOffAllLeds();
+    digitalWrite(RED_LED_PIN, HIGH);
+    buzz();
+  } 
+}
+
+void loop() {
+  calculateStatusOfWineyard();
+  delay(1000);
 }
