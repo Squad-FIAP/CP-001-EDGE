@@ -24,9 +24,4 @@ Para que seja possível a execução do projeto, são necessários os seguintes 
 ![Implementação](./ProjectConstruction.png)
 
 
-## Vídeo Explicativo
-<!-- TODO: Construir o vídeo explicativo sobre o projeto:
-        - Ser breve sobre o funcionamento;
-        - Demonstrar as 3 faixas de temperatura;
-            - Ressaltar sobre o intervalo de atualização do projeto.
-        - Demonstrar o tempo de acionamento do buzzer -->
+## [Vídeo Explicativo](./ProjectExecutingVideo.webm)
