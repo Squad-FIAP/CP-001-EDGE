@@ -3,6 +3,13 @@
 ## Descrição
 Esse repositório hospeda os artefatos produzidos durante o processo de construção do Checkpoint 01 referente a matéria de Edge Computing & Computer Systems. Todos os artefatos são cobertos pela licensa [GNU General Public License 3.0](./LICENSE).
 
+## Integrantes do Grupo
+- Gabriel Mediotti Marques - RM 552632
+- Guilherme Fernandes de Freitas - RM 554323
+- Jó Sales - RM 552679
+- Miguel Garcez de Carvalho - RM 553768
+- Vinicius Souza e Silva - RM 552781
+
 ## Requisitos do Projeto
 Para que seja possível a execução do projeto, são necessários os seguintes requisitos:
 - Arduino Uno;
@@ -24,9 +31,5 @@ Para que seja possível a execução do projeto, são necessários os seguintes 
 ![Implementação](./ProjectConstruction.png)
 
 
-## Vídeo Explicativo
-<!-- TODO: Construir o vídeo explicativo sobre o projeto:
-        - Ser breve sobre o funcionamento;
-        - Demonstrar as 3 faixas de temperatura;
-            - Ressaltar sobre o intervalo de atualização do projeto.
-        - Demonstrar o tempo de acionamento do buzzer -->
+## [Vídeo Explicativo](https://youtu.be/xHlXctdV3P4)
+**Disclaimer**: O vídeo foi gravado em um computador com Ubuntu 22.04, sendo assim, não foi possível capturar o aúdio durante a gravação. A exemplificação do funcionamento do buzzer é notável graças a animação de emissão sonora que o dispositivo apresenta.
